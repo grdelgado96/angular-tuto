@@ -14,7 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component' ;
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component' ;
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,

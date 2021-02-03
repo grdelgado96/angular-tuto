@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {MatSnackBar} from "@angular/material/snack-bar";
-import { AnimationDurations } from '@angular/material/core';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
