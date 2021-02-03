@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="search">
+  <input matInput type="search" placeholder="Search Game" >
+  <button mat-button color="primary" type="button" >SEARCH</button>
+</div>
+<div class="body-content">
+  <mat-grid-list cols="5" gutterSize="5"rowHeight="5:5">
+    <div *ngFor="let game of listGame">
+      <mat-grid-tile>
+
+          <mat-card class="example-card" tabindex="0">
+            <mat-card-title-group class="property-card">
+            <img mat-card-image-sm src={{game.thumb}} alt="Photo of {{game.external}}" class="responsive" >
+            
+            <div class="property-description">
+              <mat-card-title class="titulo">{{game.external}}</mat-card-title>
+              <mat-card-subtitle class="precio">{{game.cheapest}} &euro;</mat-card-subtitle>
+              <mat-card-actions class="button"> 
+                <button mat-button color="primary">VIEW</button>
+              </mat-card-actions> 
+            </div>
+            </mat-card-title-group>
+          </mat-card>
+          
+
+        </mat-grid-tile>
+      </div>
+      </mat-grid-list>
+    
+        
+    
+</div>
+
+
+  
+
+
+<!-- <app-footer></app-footer> -->
