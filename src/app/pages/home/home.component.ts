@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GameList, GameParams } from 'src/app/models/GameList';
 import { GameService } from 'src/app/services/game.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -10,15 +12,21 @@ import { GameService } from 'src/app/services/game.service';
 export class HomeComponent implements OnInit {
 
   public listGame:GameList[];
-  public searchName:string="batman";
+  search:string;
 
   constructor(
-    private gameService:GameService
+    private gameService:GameService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  searchgame(){
+    console.log(this.search);
     let params:GameParams=<GameParams>{};
-    params.title = this.searchName;
+    params.title = this.search;
     params.limit = 10;
     params.exact = false;
     this.gameService.getGameCollection(params).subscribe((resp:GameList[])=>{
@@ -26,6 +34,12 @@ export class HomeComponent implements OnInit {
     },error=>{
       console.log(error);
     })
+
+  }
+  view() {
+    
+      this.router.navigateByUrl('view');
+    
   }
 
 }

@@ -18,6 +18,7 @@ import { MatGridListModule} from '@angular/material/grid-list';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GameViewComponent } from './pages/game-view/game-view.component';
 
 
 
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    GameViewComponent,
     
   ],
   imports: [

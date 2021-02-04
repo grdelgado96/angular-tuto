@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {environment} from '../../environments/environment';
 import { GameParams,GameList } from '../models/GameList';
+import { GameInfo, GameLookupParams} from 'src/app/models/GameLookup';
 class ParameterCodec implements HttpParameterCodec {
   encodeKey(key: string): string {
     return encodeURIComponent(key);
@@ -52,4 +53,17 @@ export class GameService {
       params:__params
     });
   }
+
+  public getGameLookup(paramsI:GameLookupParams):Observable<GameInfo>{
+    let __params = new HttpParams({encoder:PARAMETER_CODEC});
+    let header = new HttpHeaders();
+    if(paramsI.id!= null ) __params = __params.append('id',paramsI.id.toString());
+    console.log(__params);
+    return this.http.get<GameInfo>(this.apiUrl+"/"+this.version+"/games",{
+      headers:header,
+      params:__params
+    });
+  }
+
+
 }

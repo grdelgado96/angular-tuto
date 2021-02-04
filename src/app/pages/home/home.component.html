@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="search">
-  <input matInput type="search" placeholder="Search Game" >
-  <button mat-button color="primary" type="button" >SEARCH</button>
+  <input matInput [(ngModel)]="search" type="search" placeholder="Search Game" name="search">
+  <button mat-button color="primary" type="button" (click)="searchgame()">SEARCH</button>
 </div>
 <div class="body-content">
   <mat-grid-list cols="5" gutterSize="5"rowHeight="5:5">
@@ -15,9 +15,14 @@
             <div class="property-description">
               <mat-card-title class="titulo">{{game.external}}</mat-card-title>
               <mat-card-subtitle class="precio">{{game.cheapest}} &euro;</mat-card-subtitle>
+              
               <mat-card-actions class="button"> 
+                
                 <button mat-button color="primary">VIEW</button>
+              
+                
               </mat-card-actions> 
+            
             </div>
             </mat-card-title-group>
           </mat-card>
