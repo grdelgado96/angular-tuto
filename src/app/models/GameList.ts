@@ -1,6 +1,6 @@
 export interface GameList{
-    gameId:string,
-    steamAppId:string,
+    gameID:string,
+    steamAppID:string,
     cheapest:string,
     cheapestDealID:string,
     external:string,

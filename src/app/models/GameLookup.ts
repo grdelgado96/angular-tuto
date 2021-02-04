@@ -1,7 +1,7 @@
 export interface GameInfo{
     info:{
         title:string,
-        steamAppId:string,
+        steamAppID:string,
         thumb:string
     },
     cheapestPriceEver:{
