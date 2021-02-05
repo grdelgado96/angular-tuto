@@ -8,7 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'view/:id', component: GameViewComponent},
+  { path: 'view', component: GameViewComponent},
   {
     path: '',
     redirectTo: 'login',

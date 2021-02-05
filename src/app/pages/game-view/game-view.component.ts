@@ -11,6 +11,7 @@ import { GameService } from 'src/app/services/game.service';
 export class GameViewComponent implements OnInit {
 
   public gameinfo:GameInfo;
+  public loading:boolean = false;
 
   constructor(
     private gameService:GameService,
@@ -23,10 +24,12 @@ export class GameViewComponent implements OnInit {
     this.viewHero();
 }
   viewHero():void{
+    this.loading = true;
     let params:GameLookupParams=<GameLookupParams>{};
     params.id = this.route.snapshot.paramMap.get('id');
     
     this.gameService.getGameLookup(params).subscribe((resp:GameInfo)=>{
+      this.loading = false;
       this.gameinfo = resp;
       
     },error=>{

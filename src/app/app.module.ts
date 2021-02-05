@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameViewComponent } from './pages/game-view/game-view.component';
+import { GameCardComponent } from './components/game-card/game-card.component';
 
 
 
@@ -30,6 +31,7 @@ import { GameViewComponent } from './pages/game-view/game-view.component';
     HeaderComponent,
     FooterComponent,
     GameViewComponent,
+    GameCardComponent,
     
   ],
   imports: [

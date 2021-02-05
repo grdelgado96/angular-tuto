@@ -20,7 +20,7 @@ export class LoginComponent  {
   login() {
     console.log(this.user);
     console.log(this.password);
-    if(this.user != 'user'&& this.password != '123'){
+    if(this.user != 'user' || this.password != '123'){
       this.snackBar.open("Incorrect Credencial", "" ,{
         duration: 1500,
       }); 

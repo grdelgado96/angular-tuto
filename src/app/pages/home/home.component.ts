@@ -11,8 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public listGame:GameList[];
+  public listGame:GameList[]=[];
   search:string;
+  
 
   constructor(
     private gameService:GameService,
@@ -36,10 +37,8 @@ export class HomeComponent implements OnInit {
     })
 
   }
-  view() {
-    
-      this.router.navigateByUrl('view');
-    
+  view(game: GameList) {
+    this.router.navigate(['/view', { id: game.gameID }]);
   }
 
 }

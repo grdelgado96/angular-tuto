@@ -8,14 +8,19 @@ export interface GameInfo{
         price:string,
         date:string
     },
-    deals:[{
+    deals:[
+        Deal
+    ]
+}
+export interface Deal{
+    deal:{
         storeID:string,
         dealID:string,
         price:string,
         retailPrice:string,
         savings:string
-    }]
-}
+    }
+    }
 
 export interface GameLookupParams{
     id:string
