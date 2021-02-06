@@ -3,23 +3,23 @@
   <input matInput [(ngModel)]="search" type="search" placeholder="Search Game" name="search">
   <button mat-button color="primary" type="button" (click)="searchgame()">SEARCH</button>
 </div>
-<div class="body-content" *ngIf="listGame.length>0">
-  <mat-grid-list cols="5" gutterSize="5"rowHeight="5:5">
+
+
+<div class="container-fluid">
+  <div class="row">
     <div *ngFor="let game of listGame">
-      <mat-grid-tile>
-          <app-game-card
-          [game]="game"
-          (gameitem)="view($event)"
-          >
-           
-          </app-game-card>
-      </mat-grid-tile>
+      <div class="col-xs-2">
+        <app-game-card [game]="game" (gameitem)="view($event)">
+        </app-game-card>
+      </div>
     </div>
-  </mat-grid-list>
+  </div>
 </div>
 
 
-  
+
+
+
 
 
 <!-- <app-footer></app-footer> -->

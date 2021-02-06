@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameViewComponent } from './pages/game-view/game-view.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -35,6 +36,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
     
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
