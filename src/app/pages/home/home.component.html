@@ -1,17 +1,19 @@
 <app-header></app-header>
-<div class="search">
-  <input matInput [(ngModel)]="search" type="search" placeholder="Search Game" name="search">
-  <button mat-button color="primary" type="button" (click)="searchgame()">SEARCH</button>
-</div>
+
+
+  <form class="form-inline" style="margin-top: 1em; margin-left: 2em;">
+    <input class="form-control mr-sm-2" type="search" placeholder="Game Name" aria-label="Search" [(ngModel)]="search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="searchgame()">Search</button>
+  </form>
+
+
 
 
 <div class="container-fluid">
-  <div class="row">
-    <div *ngFor="let game of listGame">
-      <div class="col-xs-2">
-        <app-game-card [game]="game" (gameitem)="view($event)">
-        </app-game-card>
-      </div>
+  <div class="row ">
+    <div *ngFor="let game of listGame" class=" col-xs-6 col-sm-5ths col-md-5ths col-lg-5ths">
+      <app-game-card [game]="game" (gameitem)="view($event)">
+      </app-game-card>
     </div>
   </div>
 </div>
@@ -22,4 +24,4 @@
 
 
 
-<!-- <app-footer></app-footer> -->
+<app-footer></app-footer>

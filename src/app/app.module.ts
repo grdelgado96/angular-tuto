@@ -14,13 +14,15 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
 import { MatGridListModule} from '@angular/material/grid-list';
-
+import { CookieService } from 'ngx-cookie-service';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameViewComponent } from './pages/game-view/game-view.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RegisterComponent } from './pages/register/register.component';
+import { UserViewComponent} from './pages/user-view/user-view.component';
 
 
 
@@ -33,6 +35,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FooterComponent,
     GameViewComponent,
     GameCardComponent,
+    RegisterComponent,
+    UserViewComponent,
     
   ],
   imports: [
@@ -53,7 +57,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     
     
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

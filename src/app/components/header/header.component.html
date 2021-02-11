@@ -1,9 +1,21 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
-  <span>HOME</span>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <button mat-button (click)="getUserList()">Other Users</button>
+      
+      
+       
+      
+    </ul>
+  </div>
   <span class="example-spacer"></span>
-  <button mat-button >Current User</button>
-  <button mat-button >Sign out</button>
-</mat-toolbar>
+  <button mat-button >{{this.name}}</button>
+  <button mat-button (click)="reset()">Sign out</button>
+</nav>

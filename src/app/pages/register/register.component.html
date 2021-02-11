@@ -1,0 +1,21 @@
+<div class="register">
+    <form class="custom-form" method="post">
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="email" type="email" placeholder="Email" name="email" required="required">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="password" type="password" placeholder="Password" name="password" required="required">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="confirmPassword" type="password" placeholder="Repeat the Password" name="confirmPassword" required="required">
+      </mat-form-field>
+    
+       <button mat-button color="primary" type="submit" (click)="register()">Register</button>
+       
+      </form>
+      
+    </div>
+  
+  

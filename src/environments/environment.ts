@@ -7,6 +7,11 @@ export const environment = {
   apiUrl:"https://www.cheapshark.com/api",
   version:"1.0"
 };
+export const environmentuser = {
+  production: false,
+  apiUrl:"https://dummyapi.io/data/api"
+};
+
 
 /*
  * For easier debugging in development mode, you can import the following file

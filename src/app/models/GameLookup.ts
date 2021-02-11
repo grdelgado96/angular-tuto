@@ -5,7 +5,7 @@ export interface GameInfo{
         thumb:string
     },
     cheapestPriceEver:{
-        price:string,
+        price:number,
         date:string
     },
     deals:[
@@ -13,13 +13,12 @@ export interface GameInfo{
     ]
 }
 export interface Deal{
-    deal:{
         storeID:string,
         dealID:string,
-        price:string,
-        retailPrice:string,
+        price:number,
+        retailPrice:number,
         savings:string
-    }
+    
     }
 
 export interface GameLookupParams{

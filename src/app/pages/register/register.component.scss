@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .custom-form {
+    height: 200px;
+    width: 30%;
+    margin: 0px auto;
+    background: rgba(217, 202, 223, 0.356);
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    color: black;
+    margin-top: 10rem;
+  }
+  
+  .mat-raised-button{
+    display: block;
+    cursor: pointer;
+  }
+  .mat-form-field{
+    display: block;
+  }
+  .message{
+    display: block;
+  }

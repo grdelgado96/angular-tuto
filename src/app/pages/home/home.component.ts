@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameList, GameParams } from 'src/app/models/GameList';
 import { GameService } from 'src/app/services/game.service';
+import { UserService } from 'src/app/services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -14,9 +15,11 @@ export class HomeComponent implements OnInit {
   public listGame:GameList[]=[];
   search:string;
   
+  
 
   constructor(
     private gameService:GameService,
+    private userService:UserService,
     private router: Router
   ) { }
 
@@ -40,5 +43,7 @@ export class HomeComponent implements OnInit {
   view(game: GameList) {
     this.router.navigate(['/view', { id: game.gameID }]);
   }
+
+  
 
 }
