@@ -9,10 +9,16 @@ ul {
   padding-left: 0;
 }
 footer {
-  background-color: #555;
+  background-color: #555555;
   color: #bbb;
-  line-height: 1.5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 90px; /* Altura a tu gusto */
+  line-height: 5px; /* Verticalmente centrado */
 }
+
+
 footer a {
   text-decoration: none;
   color: #eee;

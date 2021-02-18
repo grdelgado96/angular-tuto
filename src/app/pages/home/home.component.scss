@@ -54,3 +54,7 @@
         float: left;
     }
 }
+:host ::ng-deep .responsive circle{   
+    stroke: #f1f8f1;
+}
+

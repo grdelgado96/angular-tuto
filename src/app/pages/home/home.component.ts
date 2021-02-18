@@ -14,13 +14,15 @@ export class HomeComponent implements OnInit {
 
   public listGame:GameList[]=[];
   search:string;
+  public loading:boolean=false;
   
   
 
   constructor(
     private gameService:GameService,
     private userService:UserService,
-    private router: Router
+    private router: Router,
+
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   searchgame(){
+    this.loading=true;
     console.log(this.search);
     let params:GameParams=<GameParams>{};
     params.title = this.search;
@@ -35,6 +38,7 @@ export class HomeComponent implements OnInit {
     params.exact = false;
     this.gameService.getGameCollection(params).subscribe((resp:GameList[])=>{
         this.listGame = resp;
+        this.loading=false;
     },error=>{
       console.log(error);
     })

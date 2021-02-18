@@ -11,4 +11,6 @@
   align-self: center;
   margin-right: auto;
 }
-
+:host ::ng-deep .responsive circle{   
+  stroke: #f1f8f1;
+}

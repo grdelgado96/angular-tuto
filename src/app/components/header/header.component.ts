@@ -9,33 +9,36 @@ import { Users, User } from '../../models/UserList';
 })
 export class HeaderComponent implements OnInit {
   public name: string;
-  public listUser:Users;
+  public listUser: Users;
+  public finallist: User;
   constructor(
-    private userService:UserService,
-    private router:Router,
+    private userService: UserService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
     this.nameUser();
   }
-  nameUser(){
-    this.name=this.userService.getNameLocal();    
+  nameUser() {
+    this.name = this.userService.getNameLocal();
   }
-  reset(){
+  reset() {
     this.userService.resetLocalStorage();
     this.router.navigateByUrl('login');
   }
-  getUserList(){
-    this.userService.getUserList().subscribe((resp:Users)=>{
-      this.listUser=resp;
-      localStorage.setItem('users', JSON.stringify(this.listUser));
-      for(let i of this.listUser.data){
-      console.log(i.firstName);
-      }
+  getUserList() {
+    
+    this.userService.getUserList().subscribe((resp: Users) => {
+      this.listUser = resp;
+      localStorage.setItem('users', JSON.stringify(this.listUser.data));
+      console.log(this.listUser.data);
       this.router.navigateByUrl('user');
-    },error=>{
+    }, error => {
       console.log(error);
     })
   }
-
+  home() {
+    this.router.navigateByUrl('home');
+  }
+  
 }

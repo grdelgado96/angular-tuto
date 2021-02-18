@@ -1,5 +1,5 @@
 import { AfterContentChecked, AfterContentInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute ,Router} from '@angular/router';
 import { Location } from '@angular/common';
 import { GameInfo, GameLookupParams, Deal} from 'src/app/models/GameLookup';
 import { GameService } from 'src/app/services/game.service';
@@ -16,12 +16,13 @@ export class GameViewComponent implements OnInit{
   public average:number=0;
   public load:boolean=true;
   public sum:number=0;
+  public spinner:boolean=true;
   
 
   constructor(
     private gameService:GameService,
     private route: ActivatedRoute,
-    private location: Location
+    private router: Router,
   ) { 
   }
 
@@ -65,9 +66,13 @@ export class GameViewComponent implements OnInit{
     }
     this.average= this.sum / Number(game.deals.length);
     this.loading = false;
+    this.spinner = false;
    return this.average;
     
   
+  }
+  return() {
+    this.router.navigateByUrl('home');
   }
 
 }

@@ -11,6 +11,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
 import { MatGridListModule} from '@angular/material/grid-list';
@@ -23,6 +24,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegisterComponent } from './pages/register/register.component';
 import { UserViewComponent} from './pages/user-view/user-view.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 
 
@@ -37,6 +39,7 @@ import { UserViewComponent} from './pages/user-view/user-view.component';
     GameCardComponent,
     RegisterComponent,
     UserViewComponent,
+    UserCardComponent,
     
   ],
   imports: [
@@ -53,7 +56,8 @@ import { UserViewComponent} from './pages/user-view/user-view.component';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
     
     
   ],

@@ -3,11 +3,13 @@
 
   <form class="form-inline" style="margin-top: 1em; margin-left: 2em;">
     <input class="form-control mr-sm-2" type="search" placeholder="Game Name" aria-label="Search" [(ngModel)]="search" name="search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="searchgame()">Search</button>
+    <button class="btn my-2 my-sm-0" type="submit" (click)="searchgame()"><mat-icon>search</mat-icon></button>
   </form>
 
-
-
+<div class="responsive" *ngIf="loading" style="margin: 5em;">
+  <mat-spinner  mode="indeterminate"></mat-spinner>
+</div>
+  
 
 <div class="container-fluid">
   <div class="row ">

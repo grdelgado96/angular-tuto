@@ -1,19 +1,31 @@
-<div class="login">
-    <form class="custom-form" method="post">
 
-      <mat-form-field>
-        <input matInput [(ngModel)]="userModel.userId" type="string" placeholder="User Id" name="userModel.userId">
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput [(ngModel)]="password" type="password" placeholder="Password" name="password">
-      </mat-form-field>
-    
-       <button mat-button color="primary" type="reset" (click)="login()">LOGIN</button>
-       
-       <p class="message">Not registered? <a href="#">Create an account</a></p>
-      </form>
-      
-    </div>
   
-  
+    <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+      <div class="card card0 border-0">
+          <div class="row d-flex">
+              <div class="col-lg-6">
+                  <div class="card1 pb-5">
+                     
+                      <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpfTG8GQN9AwsCA1unxRIpQHT3dY5hiJMb1g&usqp=CAU" class="image"> </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="card2 card border-0 px-4 py-5">
+                      <div class="row px-3"> <label class="mb-1">
+                              <h6 class="mb-0 text-sm">User Id</h6>
+                          </label> <input class="mb-4" [(ngModel)]="userModel.userId" type="string" name="userModel.userId" placeholder="Enter a user id"> </div>
+                      <div class="row px-3"> <label class="mb-1">
+                              <h6 class="mb-0 text-sm">Password</h6>
+                          </label> 
+                          <input [(ngModel)]="password" type="password" name="password" placeholder="Enter password" (keyup.enter)="login()"> </div>
+                      <div class="row px-3 mb-4">
+                          <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+                      </div>
+                      <div class="row mb-3 px-3"> <button type="reset" class="btn btn-blue text-center" (keyup.enter)="login()" (click)="login()">Login</button> </div>
+                      <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger ">Register</a></small> </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>

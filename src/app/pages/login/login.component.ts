@@ -20,6 +20,7 @@ export class LoginComponent {
   password: string;
   userModel: UserModel = { user: "user", password: "123", userId: "0F8JIqi4zwvb77FGz6Wt" };
   public profile: Profile;
+  public listId:Array<string>=[];
 
   constructor(
     private router: Router,
@@ -33,11 +34,18 @@ export class LoginComponent {
     this.userService.getUserProfile(params).subscribe((resp: Profile) => {
       this.profile = resp;
       console.log(this.profile);
-      this.router.navigateByUrl('home');
-      this.userService.setNameLocal(this.profile.firstName);
+      if(this.profile!= null && this.password=="123"){
+        this.router.navigateByUrl('home');
+        this.userService.setNameLocal(this.profile.firstName);
+        localStorage.setItem('currentUser',this.profile.id);
+        localStorage.setItem('listId',JSON.stringify(this.listId));
+      }else
+      this.snackBar.open("Incorrect Credencial", "", {duration: 1500,});
+      
     }, error => {
       console.log(error);
       this.snackBar.open("Incorrect Credencial", "", {duration: 1500,});
     })
+
   }
 }

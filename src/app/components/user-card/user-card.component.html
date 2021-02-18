@@ -1,0 +1,14 @@
+<button mat-icon-button disabled={{!fav}}  color="warn" aria-label="Example icon button with a star icon" style="margin-left: 13em;">
+    <mat-icon style="cursor: pointer;" (click)="setfav(i)">start</mat-icon>
+  </button>
+<div class="avatar mx-auto white">
+    <img src={{i.picture}} class="rounded-circle img-responsive" alt="woman avatar">
+</div>
+<!-- Content -->
+<div class="card-body">
+    <!-- Name -->
+    <h4 class="card-title font-weight-bold">{{i.title}} {{i.firstName}} {{i.lastName}}</h4>
+    <hr>
+    <!-- Quotation -->
+    <p><i class="fas fa-quote-left"></i>email:<br>{{i.email}}</p>
+</div>

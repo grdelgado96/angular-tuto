@@ -1,21 +1,15 @@
 
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <button mat-button (click)="getUserList()">Other Users</button>
-      
-      
-       
-      
+      <button mat-button (click)="home()"><mat-icon >home</mat-icon> Home</button>
+      <button mat-button (click)="getUserList()"><mat-icon>people</mat-icon> Other Users</button>
     </ul>
   </div>
   <span class="example-spacer"></span>
-  <button mat-button >{{this.name}}</button>
-  <button mat-button (click)="reset()">Sign out</button>
+  <button mat-button >{{this.name}} <mat-icon>person</mat-icon></button>
+  <button mat-button (click)="reset()">Sign out <mat-icon>exit_to_app</mat-icon></button>
 </nav>

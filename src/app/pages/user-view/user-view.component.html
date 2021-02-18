@@ -1,24 +1,15 @@
 <app-header></app-header>
+<button mat-button (click)="return()"><mat-icon>arrow_back</mat-icon> Back</button>
+<div class="responsive" *ngIf="spinner" style="margin: 5em;">
+    <mat-spinner  mode="indeterminate"></mat-spinner>
+  </div>
 
-<div class="container-fluid" style="margin-top: 1em;">
+<div class="container-fluid" style="margin-top: 1em;" *ngIf="bool" >
     <div class="row ">
 
-        <div *ngFor="let i of listUser.data" class=" col-xs-6 col-sm-5ths col-md-5ths col-lg-5ths">
+        <div *ngFor="let i of listUser" class=" col-xs-6 col-sm-5ths col-md-5ths col-lg-5ths">
             
-            <button mat-icon-button disabled={{Flag}}  color="warn" aria-label="Example icon button with a star icon" style="margin-left: 13em;">
-                <mat-icon style="cursor: pointer;" (click)="flag()">start</mat-icon>
-              </button>
-            <div class="avatar mx-auto white">
-                <img src={{i.picture}} class="rounded-circle img-responsive" alt="woman avatar">
-            </div>
-            <!-- Content -->
-            <div class="card-body">
-                <!-- Name -->
-                <h4 class="card-title font-weight-bold">{{i.title}} {{i.firstName}} {{i.lastName}}</h4>
-                <hr>
-                <!-- Quotation -->
-                <p><i class="fas fa-quote-left"></i>email: {{i.email}}</p>
-            </div>
+            <app-user-card [i]="i"  (useritem)="flag($event)"></app-user-card>
         </div>
         
 

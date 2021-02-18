@@ -1,15 +1,18 @@
+
 <div class="container-fluid">
-<div class="card">
+<div class="card ">
   <div class="embed-responsive embed-responsive-16by9">
 
       <img src={{game.thumb}} class="img-responsive embed-responsive-item" alt="Photo of {{game.external}}" width="150" height="130">
   </div>
     
-      <div class="card-body">
-        <h3 class="card-title">{{game.external}}</h3>
+      <div class="card-body" >
+        <h2 class="card-title">{{game.external}}</h2>
         <p class="card-text">{{game.cheapest}} &euro;
         </p>
-        <button class="btn btn-primary" (click)="view(game)">VIEW</button>
+        <button mat-icon-button class="btn btn-basic" (click)="view(game)">
+          <mat-icon style="cursor: pointer;" >visibility</mat-icon>
+        </button>
       
     </div>
   </div>
